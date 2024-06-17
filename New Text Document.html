@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery and Map</title>
+    <title>Galerija un karte</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,8 +22,22 @@
             box-sizing: border-box;
         }
         .gallery {
-            background-color: #f0f0f0;
-            border-right: 1px solid #ccc;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .gallerija {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin: 5px;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
         }
         .map {
             background-color: #e0e0e0;
@@ -31,28 +45,46 @@
         h1 {
             text-align: center;
         }
-        .image-placeholder, .map-placeholder {
+        .image-placeholder, .Karte_placeholder {
             width: 100%;
             height: 80vh;
             background-color: #d0d0d0;
-            display: flex;
+            display: grid;
             align-items: center;
             justify-content: center;
             color: #888;
             font-size: 24px;
             border-radius: 10px;
+        }.karte {
+            width: 600px;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
         }
+        
     </style>
 </head>
 <body>
     <div class="container">
         <div class="gallery">
             <h1>Attēlu galerija</h1>
-            <div class="image-placeholder">Attēli</div>
+            <div class="image-placeholder">
+                <div class="gallerija">
+                    <img src="image1.jpg" alt="img1">
+                    <img src="image2.jpg" alt="img2">
+                    <img src="image3.jpg" alt="img3">
+                    <img src="image4.jpg" alt="img4">
+                    <img src="image5.jpg" alt="img5">
+                    <img src="image6.jpg" alt="img6">
+                    <img src="image7.jpg" alt="img7">
+                </div>
+            </div>
         </div>
         <div class="map">
             <h1>Karte</h1>
-            <div class="map-placeholder">Karte</div>
+            <div class="Karte_placeholder">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17895.31527604982!2d27.141837247405064!3d55.89884364174557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46c2fb46f60ec74d%3A0x400cfcd68f30ba0!2zS3LEgXNsYXZhLCBLcsSBc2xhdmFzIHBpbHPEk3RhLCBLcsSBc2xhdmFzIG5vdmFkcywgTFYtNTYwMQ!5e0!3m2!1slv!2slv!4v1718643608325!5m2!1slv!2slv" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </div>
 </body>
