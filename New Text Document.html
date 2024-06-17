@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery and Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+        }
+        .gallery, .map {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .gallery {
+            background-color: #f0f0f0;
+            border-right: 1px solid #ccc;
+        }
+        .map {
+            background-color: #e0e0e0;
+        }
+        h1 {
+            text-align: center;
+        }
+        .image-placeholder, .map-placeholder {
+            width: 100%;
+            height: 80vh;
+            background-color: #d0d0d0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 24px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="gallery">
+            <h1>Attēlu galerija</h1>
+            <div class="image-placeholder">Image Gallery Placeholder</div>
+        </div>
+        <div class="map">
+            <h1>Karte</h1>
+            <div class="map-placeholder">Map Placeholders well</div>
+        </div>
+    </div>
+</body>
+</html>
